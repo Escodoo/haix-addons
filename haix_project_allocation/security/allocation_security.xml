@@ -23,4 +23,12 @@
         <field name="implied_ids" eval="[Command.link(ref('group_allocation_user'))]" />
         <field name="users" eval="[Command.link(ref('base.user_admin'))]" />
     </record>
+
+    <record id="project_allocation_team_rule_company" model="ir.rule">
+        <field name="name">Allocation team: multi-company</field>
+        <field name="model_id" ref="model_project_allocation_team" />
+        <field
+            name="domain_force"
+        >['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
 </odoo>

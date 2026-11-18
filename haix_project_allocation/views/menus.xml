@@ -19,6 +19,20 @@
     />
 
     <menuitem
+        id="menu_allocation_team"
+        action="project_allocation_team_action"
+        parent="menu_allocation_config"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_allocation_employee"
+        action="hr_employee_action_allocation"
+        parent="menu_allocation_config"
+        sequence="20"
+    />
+
+    <menuitem
         id="menu_allocation_shift"
         action="project_allocation_shift_action"
         parent="menu_allocation_config"

@@ -58,15 +58,13 @@ class AllocationCommon(TransactionCase):
             }
         )
         Employee = cls.env["hr.employee"]
-        cls.emp_a = Employee.create(
-            {"name": "Field A", "resource_calendar_id": cls.calendar.id}
-        )
-        cls.emp_b = Employee.create(
-            {"name": "Field B", "resource_calendar_id": cls.calendar.id}
-        )
-        cls.emp_c = Employee.create(
-            {"name": "Field C", "resource_calendar_id": cls.calendar.id}
-        )
+        field_vals = {
+            "resource_calendar_id": cls.calendar.id,
+            "allocation_eligible": True,
+        }
+        cls.emp_a = Employee.create(dict(field_vals, name="Field A"))
+        cls.emp_b = Employee.create(dict(field_vals, name="Field B"))
+        cls.emp_c = Employee.create(dict(field_vals, name="Field C"))
         cls.emp_office = Employee.create(
             {"name": "Office", "resource_calendar_id": cls.calendar.id}
         )

@@ -1,6 +1,7 @@
 # Copyright 2026 Escodoo
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+from collections import defaultdict
 from datetime import datetime, time
 
 import pytz
@@ -24,6 +25,11 @@ class HrEmployee(models.Model):
         check_company=True,
         domain="[('company_id', 'in', [company_id, False])]",
         help="Usual team of the employee. Each employee belongs to a single team.",
+    )
+    allocation_ids = fields.One2many(
+        comodel_name="project.task.allocation",
+        inverse_name="employee_id",
+        string="Allocations",
     )
 
     def _get_allocation_calendar(self):
@@ -71,6 +77,61 @@ class HrEmployee(models.Model):
             start.astimezone(pytz.utc).replace(tzinfo=None),
             end.astimezone(pytz.utc).replace(tzinfo=None),
         )
+
+    def _get_absence_intervals(self, start, end):
+        """Return {employee id: [(start, end, label)]} of the absences that
+        touch the period, as naive UTC datetimes.
+
+        Labels: ``leave`` (approved time off), ``pending_leave`` (time off
+        waiting for approval) and ``public_holiday``.
+        """
+        result = {employee.id: [] for employee in self}
+        if not self:
+            return result
+        period_start = pytz.utc.localize(start)
+        period_end = pytz.utc.localize(end)
+        employees_per_calendar = defaultdict(lambda: self.browse())
+        for employee in self:
+            calendar = employee._get_allocation_calendar()
+            if calendar:
+                employees_per_calendar[calendar] |= employee
+        for calendar, employees in employees_per_calendar.items():
+            # sudo: allocation users may not read time off records; only the
+            # period and the kind of absence are used
+            leaves = calendar.sudo()._leave_intervals_batch(
+                period_start, period_end, resources=employees.resource_id
+            )
+            for employee in employees:
+                seen = set()
+                for leave_start, leave_end, records in leaves[employee.resource_id.id]:
+                    for record in records:
+                        label = "leave" if record.resource_id else "public_holiday"
+                        item = (
+                            leave_start.astimezone(pytz.utc).replace(tzinfo=None),
+                            leave_end.astimezone(pytz.utc).replace(tzinfo=None),
+                            label,
+                        )
+                        if item not in seen:
+                            seen.add(item)
+                            result[employee.id].append(item)
+        # sudo: same reason as above
+        pending_leaves = (
+            self.env["hr.leave"]
+            .sudo()
+            .search(
+                [
+                    ("employee_id", "in", self.ids),
+                    ("state", "in", ("confirm", "validate1")),
+                    ("date_from", "<", end),
+                    ("date_to", ">", start),
+                ]
+            )
+        )
+        for leave in pending_leaves:
+            result[leave.employee_id.id].append(
+                (leave.date_from, leave.date_to, "pending_leave")
+            )
+        return result
 
 
 class HrEmployeePublic(models.Model):

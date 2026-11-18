@@ -25,6 +25,11 @@ class ProjectAllocationTeam(models.Model):
         "here removes them from their previous team.",
     )
     member_count = fields.Integer(compute="_compute_member_count")
+    allocation_ids = fields.One2many(
+        comodel_name="project.task.allocation",
+        inverse_name="team_id",
+        string="Allocations",
+    )
     color = fields.Integer()
     sequence = fields.Integer(default=10)
     company_id = fields.Many2one(

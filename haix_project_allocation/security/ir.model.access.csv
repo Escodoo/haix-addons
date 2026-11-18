@@ -3,3 +3,5 @@ access_project_allocation_shift_user,project.allocation.shift user,model_project
 access_project_allocation_shift_manager,project.allocation.shift manager,model_project_allocation_shift,group_allocation_manager,1,1,1,1
 access_project_allocation_team_user,project.allocation.team user,model_project_allocation_team,group_allocation_user,1,0,0,0
 access_project_allocation_team_manager,project.allocation.team manager,model_project_allocation_team,group_allocation_manager,1,1,1,1
+access_project_task_allocation_user,project.task.allocation user,model_project_task_allocation,group_allocation_user,1,0,0,0
+access_project_task_allocation_manager,project.task.allocation manager,model_project_task_allocation,group_allocation_manager,1,1,1,1

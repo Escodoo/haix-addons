@@ -79,3 +79,18 @@ class AllocationCommon(TransactionCase):
         cls.shift_afternoon = cls.env.ref("haix_project_allocation.shift_afternoon")
         cls.shift_night = cls.env.ref("haix_project_allocation.shift_night")
         cls.shift_oncall = cls.env.ref("haix_project_allocation.shift_oncall")
+
+    @classmethod
+    def _alloc(cls, employee, day, shift, task=None, **vals):
+        """Create an allocation of ``employee`` on ``task`` (task_1 by default)."""
+        return cls.env["project.task.allocation"].create(
+            dict(
+                {
+                    "employee_id": employee.id,
+                    "task_id": (task or cls.task_1).id,
+                    "allocation_date": day,
+                    "shift_id": shift.id,
+                },
+                **vals,
+            )
+        )

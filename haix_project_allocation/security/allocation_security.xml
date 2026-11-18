@@ -31,4 +31,12 @@
             name="domain_force"
         >['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
     </record>
+
+    <record id="project_task_allocation_rule_company" model="ir.rule">
+        <field name="name">Task allocation: multi-company</field>
+        <field name="model_id" ref="model_project_task_allocation" />
+        <field
+            name="domain_force"
+        >['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
 </odoo>

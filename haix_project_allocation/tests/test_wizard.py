@@ -106,8 +106,12 @@ class TestWizard(AllocationCommon):
         wizard = self._wizard(MON, MON)
         self.assertNotIn(self.emp_b, wizard.line_ids.employee_id)
         wizard.show_unavailable = True
+        # Other field employees may exist in the database: compare only ours
+        ours = wizard.line_ids.sorted("sequence").filtered(
+            lambda line: line.employee_id in self.emp_a | self.emp_b | self.emp_c
+        )
         self.assertEqual(
-            wizard.line_ids.sorted("sequence").mapped("status")[:3],
+            ours.mapped("status"),
             ["available", "partial", "allocated"],
         )
 

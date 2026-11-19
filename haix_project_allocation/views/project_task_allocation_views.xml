@@ -45,7 +45,12 @@
         <field name="name">project.task.allocation.list</field>
         <field name="model">project.task.allocation</field>
         <field name="arch" type="xml">
-            <list editable="bottom" decoration-danger="has_conflict" multi_edit="1">
+            <list
+                editable="bottom"
+                open_form_view="True"
+                decoration-danger="has_conflict"
+                multi_edit="1"
+            >
                 <field name="employee_id" />
                 <field name="task_id" />
                 <field name="project_id" optional="show" />

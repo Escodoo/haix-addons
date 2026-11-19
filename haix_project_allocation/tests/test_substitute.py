@@ -54,10 +54,13 @@ class TestSubstitute(AllocationCommon):
         candidates = wizard.line_ids.sorted("sequence")
         self.assertNotIn(self.emp_a, candidates.employee_id)
         self.assertNotIn(self.emp_office, candidates.employee_id)
-        self.assertEqual(candidates[0].employee_id, self.emp_c)
-        self.assertEqual(candidates[0].status, "available")
-        self.assertEqual(candidates[-1].employee_id, self.emp_b)
-        candidates[0].action_choose()
+        # Other field employees may exist in the database: compare only ours
+        ours = candidates.filtered(
+            lambda line: line.employee_id in self.emp_b | self.emp_c
+        )
+        self.assertEqual(ours.employee_id.ids, [self.emp_c.id, self.emp_b.id])
+        self.assertEqual(ours.mapped("status"), ["available", "allocated"])
+        ours[0].action_choose()
         self.assertEqual(wizard.substitute_id, self.emp_c)
 
     def test_16_simple(self):

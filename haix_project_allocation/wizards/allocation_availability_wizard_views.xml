@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="project_allocation_availability_wizard_view_form" model="ir.ui.view">
+        <field name="name">project.allocation.availability.wizard.form</field>
+        <field name="model">project.allocation.availability.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <label for="date_from" string="Days" />
+                        <div class="o_row">
+                            <field name="date_from" />
+                            <i class="fa fa-long-arrow-right mx-2" title="To" />
+                            <field name="date_to" />
+                        </div>
+                        <field name="shift_ids" widget="many2many_tags" />
+                    </group>
+                    <group>
+                        <field name="team_id" />
+                        <field name="department_id" />
+                    </group>
+                </group>
+                <field name="line_ids" nolabel="1">
+                    <list
+                        create="false"
+                        delete="false"
+                        decoration-success="status == 'available'"
+                        decoration-warning="status == 'partial'"
+                        decoration-muted="status == 'allocated'"
+                        decoration-danger="status == 'absent'"
+                    >
+                        <field name="sequence" column_invisible="True" />
+                        <field name="employee_id" />
+                        <field name="employee_team_id" optional="show" />
+                        <field name="status" />
+                        <field name="free_shifts_text" />
+                        <field name="allocated_shifts_text" optional="show" />
+                        <field name="free_hours" widget="float_time" optional="hide" />
+                        <field
+                            name="allocated_project_ids"
+                            widget="many2many_tags"
+                            optional="show"
+                        />
+                        <field
+                            name="allocated_team_ids"
+                            widget="many2many_tags"
+                            optional="hide"
+                        />
+                        <field name="detail" optional="show" />
+                        <button
+                            name="action_allocate"
+                            type="object"
+                            string="Allocate"
+                            icon="fa-user-plus"
+                            groups="haix_project_allocation.group_allocation_manager"
+                            invisible="status in ('allocated', 'absent')"
+                        />
+                    </list>
+                </field>
+                <footer>
+                    <button
+                        name="action_open_timeline"
+                        type="object"
+                        string="See Planning"
+                        class="btn-primary"
+                    />
+                    <button string="Close" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record
+        id="project_allocation_availability_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Available in Period</field>
+        <field name="res_model">project.allocation.availability.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="project_allocation_team_view_list" model="ir.ui.view">
+        <field name="name">project.allocation.team.list</field>
+        <field name="model">project.allocation.team</field>
+        <field name="arch" type="xml">
+            <list editable="bottom" open_form_view="True">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="leader_id" />
+                <field name="member_count" string="Members" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    optional="show"
+                />
+                <field name="color" widget="color_picker" optional="hide" />
+            </list>
+        </field>
+    </record>
+
+    <record id="project_allocation_team_view_form" model="ir.ui.view">
+        <field name="name">project.allocation.team.form</field>
+        <field name="model">project.allocation.team</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="text-bg-danger"
+                        invisible="active"
+                    />
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Assembly 1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="leader_id" />
+                        </group>
+                        <group>
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                            <field name="color" widget="color_picker" />
+                            <field name="active" invisible="1" />
+                        </group>
+                    </group>
+                    <separator string="Members" />
+                    <field
+                        name="member_ids"
+                        widget="many2many"
+                        mode="kanban"
+                        context="{'default_allocation_eligible': True}"
+                    />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="project_allocation_team_view_search" model="ir.ui.view">
+        <field name="name">project.allocation.team.search</field>
+        <field name="model">project.allocation.team</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="leader_id" />
+                <field name="member_ids" string="Member" />
+                <separator />
+                <filter
+                    name="inactive"
+                    string="Archived"
+                    domain="[('active', '=', False)]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="project_allocation_team_action" model="ir.actions.act_window">
+        <field name="name">Field Teams</field>
+        <field name="res_model">project.allocation.team</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first field team
+            </p>
+            <p>
+                Teams are a starting point to schedule the day: the real
+                composition of each day is given by the allocations.
+            </p>
+        </field>
+    </record>
+</odoo>

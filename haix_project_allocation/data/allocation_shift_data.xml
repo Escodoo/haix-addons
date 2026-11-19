@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="shift_morning" model="project.allocation.shift">
+        <field name="name">Morning</field>
+        <field name="sequence">10</field>
+        <field name="source">calendar</field>
+        <field name="day_period">morning</field>
+        <field name="in_full_day" eval="True" />
+    </record>
+
+    <record id="shift_afternoon" model="project.allocation.shift">
+        <field name="name">Afternoon</field>
+        <field name="sequence">20</field>
+        <field name="source">calendar</field>
+        <field name="day_period">afternoon</field>
+        <field name="in_full_day" eval="True" />
+    </record>
+
+    <!-- Night and on-call hours are defaults pending confirmation by Haix;
+         they can be changed by the scheduling team. -->
+    <record id="shift_night" model="project.allocation.shift">
+        <field name="name">Night</field>
+        <field name="sequence">30</field>
+        <field name="source">fixed</field>
+        <field name="hour_start">19.0</field>
+        <field name="hour_end">23.0</field>
+    </record>
+
+    <record id="shift_oncall" model="project.allocation.shift">
+        <field name="name">On-call</field>
+        <field name="sequence">40</field>
+        <field name="source">fixed</field>
+        <field name="hour_start">7.0</field>
+        <field name="hour_end">19.0</field>
+    </record>
+</odoo>

@@ -1,0 +1,17 @@
+// Allocation bars are short (one shift): keep the text inside the bar,
+// cut with an ellipsis, instead of web_timeline's visible overflow.
+// Same prefix as web_timeline's rule, so :has() makes this one win.
+.oe_timeline_view .vis-timeline .vis-item {
+    .vis-item-overflow:has(.o_allocation_timeline_item) {
+        overflow: hidden;
+    }
+    .vis-item-content:has(.o_allocation_timeline_item) {
+        max-width: 100%;
+    }
+}
+
+.o_allocation_timeline_item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

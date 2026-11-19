@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="project_task_view_form" model="ir.ui.view">
+        <field name="name">project.task.form - haix_project_allocation</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="action_open_allocation_wizard"
+                    type="object"
+                    string="Allocate Team"
+                    groups="haix_project_allocation.group_allocation_manager"
+                />
+            </header>
+            <div name="button_box" position="inside">
+                <button
+                    name="action_view_allocations"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-users"
+                    groups="haix_project_allocation.group_allocation_user"
+                    invisible="not allocation_count"
+                >
+                    <field
+                        name="allocation_count"
+                        widget="statinfo"
+                        string="Allocations"
+                    />
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

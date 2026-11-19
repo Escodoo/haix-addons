@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <menuitem
+        id="menu_allocation_root"
+        name="Allocation"
+        parent="project.menu_main_pm"
+        sequence="15"
+        groups="group_allocation_user"
+    />
+
+    <menuitem
+        id="menu_allocation_planning"
+        action="action_project_task_allocation"
+        parent="menu_allocation_root"
+        sequence="10"
+        groups="group_allocation_manager"
+    />
+
+    <menuitem
+        id="menu_allocation_availability"
+        action="project_allocation_availability_wizard_action"
+        parent="menu_allocation_root"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_allocation_config"
+        name="Team Allocation"
+        parent="project.menu_project_config"
+        sequence="50"
+        groups="group_allocation_manager"
+    />
+
+    <menuitem
+        id="menu_allocation_team"
+        action="project_allocation_team_action"
+        parent="menu_allocation_config"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_allocation_employee"
+        action="hr_employee_action_allocation"
+        parent="menu_allocation_config"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_allocation_shift"
+        action="project_allocation_shift_action"
+        parent="menu_allocation_config"
+        sequence="30"
+    />
+</odoo>

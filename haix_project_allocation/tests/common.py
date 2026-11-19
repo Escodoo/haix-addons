@@ -27,7 +27,10 @@ class AllocationCommon(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        # Messages are compared in English, whatever the admin's language
+        cls.env = cls.env(
+            context=dict(cls.env.context, tracking_disable=True, lang="en_US")
+        )
         attendances = []
         for dayofweek in ("0", "1", "2", "3", "4"):
             attendances += [

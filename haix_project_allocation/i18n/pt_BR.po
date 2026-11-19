@@ -1,0 +1,1132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haix_project_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-19 14:19+0000\n"
+"PO-Revision-Date: 2026-11-19 14:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+msgid "%(employee)s does not work in the %(shift)s shift on %(date)s."
+msgstr "%(employee)s não trabalha no turno %(shift)s em %(date)s."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+msgid "%(employee)s has %(absences)s during this allocation."
+msgstr "%(employee)s tem %(absences)s durante esta alocação."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+msgid ""
+"%(employee)s is already allocated at that time and overlapping allocations "
+"are blocked: release the substitute from the other site instead."
+msgstr "%(employee)s já está alocado nesse horário e a sobreposição de alocações está bloqueada: libere o substituto da outra obra."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+msgid ""
+"%(employee)s is already allocated to %(task)s from %(start)s to %(end)s."
+msgstr "%(employee)s já está alocado em %(task)s de %(start)s a %(end)s."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+msgid ""
+"%(substitute)s left this site on %(day)s (%(shift)s) to replace %(outgoing)s"
+" on %(task)s."
+msgstr "%(substitute)s saiu desta obra em %(day)s (%(shift)s) para substituir %(outgoing)s em %(task)s."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+msgid "%(substitute)s replaced %(outgoing)s on %(day)s (%(shift)s)."
+msgstr "%(substitute)s substituiu %(outgoing)s em %(day)s (%(shift)s)."
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_availability_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_wizard_view_form
+msgid "<i class=\"fa fa-long-arrow-right mx-2\" title=\"To\"/>"
+msgstr "<i class=\"fa fa-long-arrow-right mx-2\" title=\"Até\"/>"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_timeline
+msgid "<span> · </span>"
+msgstr "<span> · </span>"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_availability_wizard_line__status__absent
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_substitute_wizard_line__status__absent
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_wizard_line__status__absent
+msgid "Absent"
+msgstr "Ausente"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_needaction
+msgid "Action Needed"
+msgstr "Ação necessária"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__active
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__active
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__active
+msgid "Active"
+msgstr "Ativo"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_shift__day_period__afternoon
+#: model:project.allocation.shift,name:haix_project_allocation.shift_afternoon
+msgid "Afternoon"
+msgstr "Tarde"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_availability_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_wizard_view_form
+msgid "Allocate"
+msgstr "Alocar"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task.py:0
+#: code:addons/haix_project_allocation/wizards/allocation_availability_wizard.py:0
+#: code:addons/haix_project_allocation/wizards/task_allocation_wizard.py:0
+#: model:ir.model,name:haix_project_allocation.model_project_task_allocation_wizard
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_view_form
+msgid "Allocate Team"
+msgstr "Alocar equipe"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_task_allocation_wizard_line
+msgid "Allocate Team Line"
+msgstr "Linha de alocação de equipe"
+
+#. module: haix_project_allocation
+#: model_terms:ir.actions.act_window,help:haix_project_allocation.action_project_task_allocation
+msgid "Allocate the field team to tasks"
+msgstr "Aloque a equipe de campo nas tarefas"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_availability_wizard_line__status__allocated
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_substitute_wizard_line__status__allocated
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_wizard_line__status__allocated
+msgid "Allocated"
+msgstr "Alocado"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__allocated_team_ids
+msgid "Allocated By"
+msgstr "Alocado por"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task__allocated_employee_ids
+msgid "Allocated Employees"
+msgstr "Funcionários alocados"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__allocated_project_ids
+msgid "Allocated On"
+msgstr "Alocado em"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__allocated_shifts_text
+msgid "Allocated Shifts"
+msgstr "Turnos alocados"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__allocation_id
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_root
+msgid "Allocation"
+msgstr "Alocação"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task__allocation_count
+msgid "Allocation Count"
+msgstr "Qtd. de alocações"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_allocation_shift
+msgid "Allocation Shift"
+msgstr "Turno de alocação"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_allocation_team
+#: model:ir.model.fields,field_description:haix_project_allocation.field_hr_employee__allocation_team_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_hr_employee_public__allocation_team_id
+msgid "Allocation Team"
+msgstr "Equipe de alocação"
+
+#. module: haix_project_allocation
+#: model:res.groups,name:haix_project_allocation.group_allocation_user
+msgid "Allocation: Read"
+msgstr "Alocação: leitura"
+
+#. module: haix_project_allocation
+#: model:res.groups,name:haix_project_allocation.group_allocation_manager
+msgid "Allocation: Scheduling"
+msgstr "Alocação: programação"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task.py:0
+#: code:addons/haix_project_allocation/wizards/task_allocation_wizard.py:0
+#: model:ir.model.fields,field_description:haix_project_allocation.field_hr_employee__allocation_ids
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__allocation_ids
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task__allocation_ids
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.hr_employee_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_view_form
+msgid "Allocations"
+msgstr "Alocações"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__already_allocated
+msgid "Already Allocated"
+msgstr "Já alocado"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation_wizard_line__already_allocated
+msgid ""
+"Already allocated to this task in the period: existing allocations are kept "
+"and not duplicated."
+msgstr "Já alocado nesta tarefa no período: as alocações existentes são mantidas e não são duplicadas."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation_wizard__show_unavailable
+msgid "Also list employees who are allocated or absent."
+msgstr "Listar também os funcionários alocados ou ausentes."
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_shift_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_shift_view_search
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_team_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_team_view_search
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Archived"
+msgstr "Arquivado"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Qtd. de anexos"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_availability_wizard_line__status__available
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_substitute_wizard_line__status__available
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_wizard_line__status__available
+msgid "Available"
+msgstr "Disponível"
+
+#. module: haix_project_allocation
+#: model:ir.actions.act_window,name:haix_project_allocation.project_allocation_availability_wizard_action
+#: model:ir.model,name:haix_project_allocation.model_project_allocation_availability_wizard
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_availability
+msgid "Available in Period"
+msgstr "Disponíveis no período"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_allocation_availability_wizard_line
+msgid "Available in Period Line"
+msgstr "Linha de disponíveis no período"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_res_company__allocation_block_overlap
+#: model:ir.model.fields,field_description:haix_project_allocation.field_res_config_settings__allocation_block_overlap
+msgid "Block Overlapping Allocations"
+msgstr "Bloquear alocações sobrepostas"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_substitute_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_wizard_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__line_ids
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_substitute_wizard_view_form
+msgid "Candidates"
+msgstr "Candidatos"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_substitute_wizard_view_form
+msgid "Choose"
+msgstr "Escolher"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+msgid "Choose a substitute different from %(employee)s."
+msgstr "Escolha um substituto diferente de %(employee)s."
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_availability_wizard_view_form
+msgid "Close"
+msgstr "Fechar"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__color
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__color
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__color
+msgid "Color"
+msgstr "Cor"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__company_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__company_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__company_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__company_id
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation_substitute_wizard__company_id
+msgid ""
+"Company of the task or, for tasks shared between companies, of the employee."
+msgstr "Empresa da tarefa ou, nas tarefas compartilhadas entre empresas, do funcionário."
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configurações"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__conflict_allocation_ids
+msgid "Conflicting Allocations"
+msgstr "Alocações em conflito"
+
+#. module: haix_project_allocation
+#: model_terms:ir.actions.act_window,help:haix_project_allocation.project_allocation_team_action
+msgid "Create the first field team"
+msgstr "Crie a primeira equipe de campo"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__create_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__create_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__crosses_midnight
+msgid "Crosses Midnight"
+msgstr "Passa da meia-noite"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__partner_id
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__allocation_date
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Day"
+msgstr "Dia"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__day_period
+msgid "Day Period"
+msgstr "Período do dia"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_shift__day_period
+msgid "Day period of the working schedule used by this shift."
+msgstr "Período do dia da jornada de trabalho usado por este turno."
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_availability_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_wizard_view_form
+msgid "Days"
+msgstr "Dias"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__department_id
+msgid "Department"
+msgstr "Departamento"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__detail
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__detail
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__detail
+msgid "Detail"
+msgstr "Detalhe"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__display_name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_team__member_ids
+msgid ""
+"Each employee belongs to a single team: adding an employee here removes them"
+" from their previous team."
+msgstr "Cada funcionário pertence a uma única equipe: incluir um funcionário aqui o retira da equipe anterior."
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_hr_employee
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__employee_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__employee_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__employee_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__employee_id
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Employee"
+msgstr "Funcionário"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__line_ids
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__line_ids
+msgid "Employees"
+msgstr "Funcionários"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__date_end
+msgid "End"
+msgstr "Fim"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__hour_end
+msgid "End Hour"
+msgstr "Hora de fim"
+
+#. module: haix_project_allocation
+#: model:ir.actions.act_window,name:haix_project_allocation.hr_employee_action_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_hr_employee__allocation_eligible
+#: model:ir.model.fields,field_description:haix_project_allocation.field_hr_employee_public__allocation_eligible
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_employee
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.hr_employee_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.hr_employee_view_search
+msgid "Field Team"
+msgstr "Equipe de campo"
+
+#. module: haix_project_allocation
+#: model:ir.actions.act_window,name:haix_project_allocation.project_allocation_team_action
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_team
+msgid "Field Teams"
+msgstr "Equipes de campo"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_hr_employee__allocation_eligible
+msgid ""
+"Field team employees can be allocated to tasks and appear in the "
+"availability screen."
+msgstr "Os funcionários da equipe de campo podem ser alocados em tarefas e aparecem na tela de disponibilidade."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_shift__source__fixed
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_shift_view_search
+msgid "Fixed Hours"
+msgstr "Horário fixo"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (parceiros)"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__free_hours
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__free_hours
+msgid "Free Hours"
+msgstr "Horas livres"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__free_shifts_text
+msgid "Free Shifts"
+msgstr "Turnos livres"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__date_from
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__date_from
+msgid "From"
+msgstr "De"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_wizard_view_form
+msgid "Full Day"
+msgstr "Dia inteiro"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__has_conflict
+msgid "Has Conflict"
+msgstr "Tem conflito"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__has_message
+msgid "Has Message"
+msgstr "Tem mensagem"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__duration_hours
+msgid "Hours"
+msgstr "Horas"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Se marcado, novas mensagens precisam da sua atenção."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__message_has_error
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Se marcado, algumas mensagens tiveram erro de entrega."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_is_follower
+msgid "Is Follower"
+msgstr "É seguidor"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_substitute_wizard__release_mode__keep
+msgid "Keep both allocations"
+msgstr "Manter as duas alocações"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__write_uid
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__write_date
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__write_date
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__employee_id
+msgid "Leaving Employee"
+msgstr "Funcionário que sai"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation_substitute_wizard__reason
+msgid "Logged in the chatter of the allocations involved."
+msgstr "Registrado no chatter das alocações envolvidas."
+
+#. module: haix_project_allocation
+#: model_terms:ir.actions.act_window,help:haix_project_allocation.hr_employee_action_allocation
+msgid "Mark the employees that work in the field"
+msgstr "Marque os funcionários que trabalham em campo"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_team_view_search
+msgid "Member"
+msgstr "Membro"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__member_count
+msgid "Member Count"
+msgstr "Qtd. de membros"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__member_ids
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_team_view_form
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_team_view_list
+msgid "Members"
+msgstr "Membros"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_has_error
+msgid "Message Delivery error"
+msgstr "Erro de entrega de mensagem"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_ids
+msgid "Messages"
+msgstr "Mensagens"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_shift__day_period__morning
+#: model:project.allocation.shift,name:haix_project_allocation.shift_morning
+msgid "Morning"
+msgstr "Manhã"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__name
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Next Week"
+msgstr "Próxima semana"
+
+#. module: haix_project_allocation
+#: model:project.allocation.shift,name:haix_project_allocation.shift_night
+msgid "Night"
+msgstr "Noite"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__note
+msgid "Note"
+msgstr "Observação"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_form
+msgid "Notes..."
+msgstr "Observações..."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de ações"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de erros"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensagens que exigem ação"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensagens com erro de entrega"
+
+#. module: haix_project_allocation
+#: model:project.allocation.shift,name:haix_project_allocation.shift_oncall
+msgid "On-call"
+msgstr "Plantão"
+
+#. module: haix_project_allocation
+#: model_terms:ir.actions.act_window,help:haix_project_allocation.hr_employee_action_allocation
+msgid "Only field team employees can be allocated to tasks."
+msgstr "Somente funcionários da equipe de campo podem ser alocados em tarefas."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_availability_wizard__team_id
+msgid "Only list the members of this team."
+msgstr "Listar somente os membros desta equipe."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/hr_employee.py:0
+msgid "Outside working hours"
+msgstr "Fora da jornada"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__in_full_day
+msgid "Part of Full Day"
+msgstr "Faz parte do dia inteiro"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_availability_wizard_line__status__partial
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_substitute_wizard_line__status__partial
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_wizard_line__status__partial
+msgid "Partially Available"
+msgstr "Parcialmente disponível"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/hr_employee.py:0
+msgid "Pending time off"
+msgstr "Folga pendente"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__employee_ids
+msgid "Preselected Employees"
+msgstr "Funcionários pré-selecionados"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.res_config_settings_view_form
+msgid ""
+"Prevent an employee from having two overlapping allocations. When disabled, "
+"overlaps are allowed and flagged."
+msgstr "Impede que um funcionário tenha duas alocações sobrepostas. Desativado, a sobreposição é permitida e sinalizada."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__project_id
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Project"
+msgstr "Projeto"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_hr_employee_public
+msgid "Public Employee"
+msgstr "Funcionário público"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/hr_employee.py:0
+msgid "Public holiday"
+msgstr "Feriado"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__rating_ids
+msgid "Ratings"
+msgstr "Avaliações"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__reason
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+msgid "Reason: %(reason)s"
+msgstr "Motivo: %(reason)s"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__release_mode
+msgid "Release Mode"
+msgstr "Liberação"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_task_allocation_substitute_wizard__release_mode__archive
+msgid "Release the substitute from the other site"
+msgstr "Liberar o substituto da outra obra"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erro de entrega de SMS"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_availability_wizard_view_form
+msgid "See Planning"
+msgstr "Ver planejamento"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+msgid "Select a single allocation to substitute."
+msgstr "Selecione uma única alocação para substituir."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__selected
+msgid "Selected"
+msgstr "Selecionado"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_shift__in_full_day
+msgid "Selected by the 'Full Day' shortcut when allocating."
+msgstr "Selecionado pelo atalho 'Dia inteiro' ao alocar."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__sequence
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__sequence
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__sequence
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__sequence
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__sequence
+msgid "Sequence"
+msgstr "Sequência"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__shift_id
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Shift"
+msgstr "Turno"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_allocation_shift.py:0
+msgid "Shift %(shift)s hours must be between 00:00 and 24:00."
+msgstr "Os horários do turno %(shift)s devem estar entre 00:00 e 24:00."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_allocation_shift.py:0
+msgid "Shift %(shift)s needs a day period."
+msgstr "O turno %(shift)s precisa de um período do dia."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_allocation_shift.py:0
+msgid "Shift %(shift)s start and end hours must be different."
+msgstr "As horas de início e fim do turno %(shift)s devem ser diferentes."
+
+#. module: haix_project_allocation
+#: model:ir.actions.act_window,name:haix_project_allocation.project_allocation_shift_action
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__shift_ids
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__shift_ids
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_shift
+msgid "Shifts"
+msgstr "Turnos"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__show_unavailable
+msgid "Show Unavailable"
+msgstr "Mostrar indisponíveis"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__source
+msgid "Source"
+msgstr "Origem"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__date_start
+msgid "Start"
+msgstr "Início"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_shift__hour_start
+msgid "Start Hour"
+msgstr "Hora de início"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__status
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__status
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__status
+msgid "Status"
+msgstr "Situação"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__substitute_id
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_substitute_wizard_view_form
+msgid "Substitute"
+msgstr "Substituto"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+#: code:addons/haix_project_allocation/wizards/allocation_substitute_wizard.py:0
+#: model:ir.actions.act_window,name:haix_project_allocation.project_task_allocation_substitute_wizard_action
+#: model:ir.model,name:haix_project_allocation.model_project_task_allocation_substitute_wizard
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_form
+msgid "Substitute Employee"
+msgstr "Substituir funcionário"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_task_allocation_substitute_wizard_line
+msgid "Substitute Employee Candidate"
+msgstr "Candidato a substituto"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard__substitute_conflict_ids
+msgid "Substitute's Overlapping Allocations"
+msgstr "Alocações sobrepostas do substituto"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_task
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__task_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__task_id
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: haix_project_allocation
+#: model:ir.model,name:haix_project_allocation.model_project_task_allocation
+msgid "Task Allocation"
+msgstr "Alocação de tarefa"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__team_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__employee_team_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__team_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__team_id
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Team"
+msgstr "Equipe"
+
+#. module: haix_project_allocation
+#: model:ir.module.category,name:haix_project_allocation.module_category_team_allocation
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_config
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.res_config_settings_view_form
+msgid "Team Allocation"
+msgstr "Alocação de equipe"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__is_team_member
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Team Member"
+msgstr "Membro da equipe"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__team_members_only
+msgid "Team Members Only"
+msgstr "Somente membros da equipe"
+
+#. module: haix_project_allocation
+#: model:ir.actions.act_window,name:haix_project_allocation.action_project_task_allocation
+#: model:ir.ui.menu,name:haix_project_allocation.menu_allocation_planning
+msgid "Team Planning"
+msgstr "Planejamento da equipe"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation_wizard__team_id
+msgid ""
+"Team of the site for these days. Its available members are selected, and "
+"every allocation created gets this team."
+msgstr "Equipe da obra nesses dias. Os membros disponíveis são selecionados e toda alocação criada recebe esta equipe."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__team_id
+msgid ""
+"Team the employee was allocated by. Defaults to the employee's team and does"
+" not change when the employee changes team."
+msgstr "Equipe pela qual o funcionário foi alocado. Por padrão é a equipe do funcionário e não muda quando ele troca de equipe."
+
+#. module: haix_project_allocation
+#: model_terms:ir.actions.act_window,help:haix_project_allocation.project_allocation_team_action
+msgid ""
+"Teams are a starting point to schedule the day: the real\n"
+"                composition of each day is given by the allocations."
+msgstr ""
+"As equipes são o ponto de partida para programar o dia: a\n"
+"                composição real de cada dia é dada pelas alocações."
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_substitute_wizard_view_form
+msgid "The substitute is already allocated at that time:"
+msgstr "O substituto já está alocado nesse horário:"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/task_allocation_wizard.py:0
+msgid ""
+"There is no allocation to create: select at least one employee who works in "
+"the selected days and shifts."
+msgstr "Não há alocação a criar: selecione ao menos um funcionário que trabalhe nos dias e turnos selecionados."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/wizards/task_allocation_wizard.py:0
+msgid ""
+"These employees are already allocated to another task in the selected shifts:\n"
+"%(conflicts)s"
+msgstr ""
+"Estes funcionários já estão alocados em outra tarefa nos turnos selecionados:\n"
+"%(conflicts)s"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "This Week"
+msgstr "Esta semana"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_form
+msgid "This allocation overlaps:"
+msgstr "Esta alocação se sobrepõe a:"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/hr_employee.py:0
+msgid "Time off"
+msgstr "Folga"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard__date_to
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard__date_to
+msgid "To"
+msgstr "Até"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Today"
+msgstr "Hoje"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_list
+msgid "Total"
+msgstr "Total"
+
+#. module: haix_project_allocation
+#: model_terms:ir.actions.act_window,help:haix_project_allocation.action_project_task_allocation
+msgid ""
+"Use \"Allocate Team\" on a task, or create allocations here.\n"
+"                Each person gets one line in the timeline."
+msgstr ""
+"Use \"Alocar equipe\" numa tarefa ou crie as alocações aqui.\n"
+"                Cada pessoa tem uma linha na linha do tempo."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_team__leader_id
+msgid "Usual Leader"
+msgstr "Líder habitual"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_hr_employee__allocation_team_id
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_availability_wizard_line__employee_team_id
+msgid "Usual team of the employee. Each employee belongs to a single team."
+msgstr "Equipe habitual do funcionário. Cada funcionário pertence a uma única equipe."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__warning_message
+msgid "Warning Message"
+msgstr "Mensagem de aviso"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation__website_message_ids
+msgid "Website Messages"
+msgstr "Mensagens do site"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation__website_message_ids
+msgid "Website communication history"
+msgstr "Histórico de comunicação do site"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_task_allocation_substitute_wizard__release_mode
+msgid ""
+"What to do with the substitute's allocations that overlap this one. Keeping "
+"both is only allowed when overlaps are not blocked."
+msgstr "O que fazer com as alocações do substituto que se sobrepõem a esta. Manter as duas só é permitido quando a sobreposição não está bloqueada."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_res_company__allocation_block_overlap
+#: model:ir.model.fields,help:haix_project_allocation.field_res_config_settings__allocation_block_overlap
+msgid ""
+"When enabled, an employee cannot have two overlapping allocations. When "
+"disabled, overlaps are allowed and flagged."
+msgstr "Ativado, um funcionário não pode ter duas alocações sobrepostas. Desativado, a sobreposição é permitida e sinalizada."
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_shift__hour_end
+msgid ""
+"When the end hour is lower than or equal to the start hour, the shift ends "
+"on the next day."
+msgstr "Quando a hora de fim é menor ou igual à de início, o turno termina no dia seguinte."
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "With Conflict"
+msgstr "Com conflito"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_task_allocation_view_search
+msgid "Without Team"
+msgstr "Sem equipe"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_allocation_availability_wizard_line__wizard_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_substitute_wizard_line__wizard_id
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "Assistente"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,field_description:haix_project_allocation.field_project_task_allocation_wizard_line__work_hours
+msgid "Work Hours"
+msgstr "Horas de trabalho"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields.selection,name:haix_project_allocation.selection__project_allocation_shift__source__calendar
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_shift_view_search
+msgid "Working Schedule"
+msgstr "Jornada de trabalho"
+
+#. module: haix_project_allocation
+#: model:ir.model.fields,help:haix_project_allocation.field_project_allocation_shift__source
+msgid ""
+"Working Schedule: hours come from the employee's working schedule for the selected day period.\n"
+"Fixed Hours: hours are set on the shift and do not depend on the working schedule."
+msgstr ""
+"Jornada de trabalho: os horários vêm da jornada do funcionário no período do dia selecionado.\n"
+"Horário fixo: os horários são definidos no turno e não dependem da jornada."
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+msgid "a public holiday"
+msgstr "um feriado"
+
+#. module: haix_project_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_allocation.project_allocation_team_view_form
+msgid "e.g. Assembly 1"
+msgstr "ex.: Montagem 1"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/hr_employee.py:0
+msgid "free"
+msgstr "livre"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+msgid "time off"
+msgstr "folga"
+
+#. module: haix_project_allocation
+#. odoo-python
+#: code:addons/haix_project_allocation/models/project_task_allocation.py:0
+msgid "time off pending approval"
+msgstr "folga pendente de aprovação"

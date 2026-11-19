@@ -21,10 +21,11 @@
                 <field name="shift_id" />
                 <field name="team_id" />
                 <field name="has_conflict" />
+                <!-- web_timeline only allows b, div, span, small and img -->
                 <templates>
                     <t t-name="timeline-item">
                         <div class="o_allocation_timeline_item">
-                            <strong t-esc="record.shift_id[1]" />
+                            <b t-esc="record.shift_id[1]" />
                             <span> · </span>
                             <span t-esc="record.task_id[1]" />
                             <span t-if="record.project_id">

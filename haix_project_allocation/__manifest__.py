@@ -33,5 +33,10 @@
         "wizards/allocation_substitute_wizard_views.xml",
         "views/menus.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "haix_project_allocation/static/src/scss/allocation_timeline.scss",
+        ],
+    },
     "installable": True,
 }

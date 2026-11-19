@@ -11,7 +11,6 @@
                 date_start="date_start"
                 date_stop="date_end"
                 default_group_by="employee_id"
-                event_open_popup="true"
                 stack="false"
                 mode="week"
                 colors="#ec7063: has_conflict == true"

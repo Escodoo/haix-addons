@@ -11,6 +11,14 @@
     />
 
     <menuitem
+        id="menu_allocation_planning"
+        action="action_project_task_allocation"
+        parent="menu_allocation_root"
+        sequence="10"
+        groups="group_allocation_manager"
+    />
+
+    <menuitem
         id="menu_allocation_availability"
         action="project_allocation_availability_wizard_action"
         parent="menu_allocation_root"

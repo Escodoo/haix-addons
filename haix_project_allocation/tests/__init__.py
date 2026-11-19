@@ -6,3 +6,4 @@ from . import test_availability
 from . import test_wizard
 from . import test_availability_wizard
 from . import test_substitute
+from . import test_security

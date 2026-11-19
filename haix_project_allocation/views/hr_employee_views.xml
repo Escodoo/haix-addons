@@ -7,6 +7,17 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form" />
         <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="action_view_allocations"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-calendar"
+                    string="Allocations"
+                    groups="haix_project_allocation.group_allocation_user"
+                    invisible="not allocation_eligible"
+                />
+            </div>
             <group name="departure" position="before">
                 <group name="allocation" string="Field Team">
                     <field name="allocation_eligible" />

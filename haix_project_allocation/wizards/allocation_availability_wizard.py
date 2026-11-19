@@ -113,16 +113,16 @@ class ProjectAllocationAvailabilityWizard(models.TransientModel):
 
     def action_open_timeline(self):
         self.ensure_one()
-        return {
-            "type": "ir.actions.act_window",
-            "name": _("Team Planning"),
-            "res_model": "project.task.allocation",
-            "view_mode": "list,form",
-            "domain": [
-                ("allocation_date", ">=", self.date_from),
-                ("allocation_date", "<=", self.date_to),
-            ],
-        }
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "haix_project_allocation.action_project_task_allocation"
+        )
+        action["domain"] = [
+            ("allocation_date", ">=", self.date_from),
+            ("allocation_date", "<=", self.date_to),
+        ]
+        # The period replaces the default "This Week" filter
+        action["context"] = {}
+        return action
 
 
 class ProjectAllocationAvailabilityWizardLine(models.TransientModel):

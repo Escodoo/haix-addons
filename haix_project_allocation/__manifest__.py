@@ -22,6 +22,8 @@
         "security/allocation_security.xml",
         "security/ir.model.access.csv",
         "data/allocation_shift_data.xml",
+        "views/project_task_allocation_views.xml",
+        "views/res_config_settings_views.xml",
         "views/project_allocation_shift_views.xml",
         "views/project_allocation_team_views.xml",
         "views/hr_employee_views.xml",

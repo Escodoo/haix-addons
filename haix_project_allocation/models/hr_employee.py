@@ -40,6 +40,15 @@ class HrEmployee(models.Model):
         string="Allocations",
     )
 
+    def action_view_allocations(self):
+        self.ensure_one()
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "haix_project_allocation.action_project_task_allocation"
+        )
+        action["domain"] = [("employee_id", "=", self.id)]
+        action["context"] = {"default_employee_id": self.id}
+        return action
+
     def _get_allocation_calendar(self):
         """Working schedule used for allocations: the employee's, or the
         company's when the employee has none."""

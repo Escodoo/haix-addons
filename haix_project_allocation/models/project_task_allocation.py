@@ -318,6 +318,17 @@ class ProjectTaskAllocation(models.Model):
         (self | before).exists()._refresh_conflicts()
         return result
 
+    def action_open_substitute_wizard(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Substitute Employee"),
+            "res_model": "project.task.allocation.substitute.wizard",
+            "view_mode": "form",
+            "target": "new",
+            "context": {"default_allocation_id": self.id},
+        }
+
     def unlink(self):
         neighbours = self._get_overlapping_union() - self
         result = super().unlink()

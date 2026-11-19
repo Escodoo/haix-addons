@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="project_task_allocation_substitute_wizard_view_form" model="ir.ui.view">
+        <field name="name">project.task.allocation.substitute.wizard.form</field>
+        <field name="model">project.task.allocation.substitute.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="allocation_id" readonly="1" />
+                        <field name="employee_id" />
+                        <field name="company_id" invisible="1" />
+                    </group>
+                    <group>
+                        <field
+                            name="substitute_id"
+                            options="{'no_create': True}"
+                            required="1"
+                        />
+                        <field name="reason" />
+                    </group>
+                </group>
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="not substitute_conflict_ids"
+                >
+                    The substitute is already allocated at that time:
+                    <field
+                    name="substitute_conflict_ids"
+                    widget="many2many_tags"
+                    readonly="1"
+                />
+                    <field name="release_mode" widget="radio" />
+                </div>
+                <separator string="Candidates" />
+                <field name="line_ids" nolabel="1">
+                    <list
+                        create="false"
+                        delete="false"
+                        decoration-success="status == 'available'"
+                        decoration-warning="status == 'partial'"
+                        decoration-muted="status == 'allocated'"
+                        decoration-danger="status == 'absent'"
+                    >
+                        <field name="sequence" column_invisible="True" />
+                        <field name="employee_id" />
+                        <field name="status" />
+                        <field name="detail" />
+                        <button
+                            name="action_choose"
+                            type="object"
+                            string="Choose"
+                            icon="fa-check"
+                        />
+                    </list>
+                </field>
+                <footer>
+                    <button
+                        name="action_confirm"
+                        type="object"
+                        string="Substitute"
+                        class="btn-primary"
+                        data-hotkey="q"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record
+        id="project_task_allocation_substitute_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Substitute Employee</field>
+        <field name="res_model">project.task.allocation.substitute.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_project_task_allocation" />
+        <field name="binding_view_types">list,form</field>
+        <field
+            name="groups_id"
+            eval="[Command.link(ref('haix_project_allocation.group_allocation_manager'))]"
+        />
+    </record>
+</odoo>

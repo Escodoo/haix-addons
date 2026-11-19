@@ -27,6 +27,7 @@
         "views/hr_employee_views.xml",
         "views/project_task_views.xml",
         "wizards/task_allocation_wizard_views.xml",
+        "wizards/allocation_availability_wizard_views.xml",
         "views/menus.xml",
     ],
     "installable": True,

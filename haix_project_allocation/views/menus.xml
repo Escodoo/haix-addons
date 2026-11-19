@@ -11,6 +11,13 @@
     />
 
     <menuitem
+        id="menu_allocation_availability"
+        action="project_allocation_availability_wizard_action"
+        parent="menu_allocation_root"
+        sequence="20"
+    />
+
+    <menuitem
         id="menu_allocation_config"
         name="Team Allocation"
         parent="project.menu_project_config"

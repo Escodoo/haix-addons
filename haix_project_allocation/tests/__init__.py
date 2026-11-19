@@ -4,3 +4,4 @@ from . import test_shift_interval
 from . import test_allocation
 from . import test_availability
 from . import test_wizard
+from . import test_availability_wizard

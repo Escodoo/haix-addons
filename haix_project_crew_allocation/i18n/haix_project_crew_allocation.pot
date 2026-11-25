@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haix_project_crew_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-25 13:53+0000\n"
+"PO-Revision-Date: 2026-11-25 13:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: haix_project_crew_allocation
+#: model:ir.model,name:haix_project_crew_allocation.model_ir_actions_act_window
+msgid "Action Window"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#. odoo-python
+#: code:addons/haix_project_crew_allocation/models/project_task.py:0
+#: code:addons/haix_project_crew_allocation/wizards/allocation_availability_wizard.py:0
+#: code:addons/haix_project_crew_allocation/wizards/task_allocation_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:haix_project_crew_allocation.project_task_view_form
+msgid "Allocate People"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model,name:haix_project_crew_allocation.model_project_task_allocation_wizard
+msgid "Allocate Team"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model,name:haix_project_crew_allocation.model_project_task_allocation_wizard_line
+msgid "Allocate Team Line"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model,name:haix_project_crew_allocation.model_project_allocation_availability_wizard
+msgid "Available in Period"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model.fields,help:haix_project_crew_allocation.field_hr_resume_line__proof_attachment_ids
+msgid "Certificate or other document that proves the certification."
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model.fields,field_description:haix_project_crew_allocation.field_project_task_allocation_wizard__certification_ids
+msgid "Certifications"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#. odoo-python
+#: code:addons/haix_project_crew_allocation/models/hr_resume_line.py:0
+msgid "Choose the certification of %(name)s."
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_crew_allocation.resume_survey_line_view_form
+msgid "End Date"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model.fields,field_description:haix_project_crew_allocation.field_project_task_allocation_wizard_line__job_id
+msgid "Job Position"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model.fields,help:haix_project_crew_allocation.field_project_task_allocation_wizard__certification_ids
+msgid ""
+"Only employees with all these certifications valid for the whole period are "
+"listed."
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model.fields,field_description:haix_project_crew_allocation.field_hr_resume_line__proof_attachment_ids
+msgid "Proof"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model,name:haix_project_crew_allocation.model_hr_resume_line
+msgid "Resume line of an employee"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model_terms:ir.ui.view,arch_db:haix_project_crew_allocation.resume_survey_line_view_form
+msgid "Start Date"
+msgstr ""
+
+#. module: haix_project_crew_allocation
+#: model:ir.model,name:haix_project_crew_allocation.model_project_task
+msgid "Task"
+msgstr ""

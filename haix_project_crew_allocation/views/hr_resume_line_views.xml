@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="resume_survey_line_view_form" model="ir.ui.view">
+        <field name="name">hr.resume.line.form - haix</field>
+        <field name="model">hr.resume.line</field>
+        <field name="inherit_id" ref="hr_skills_survey.resume_survey_line_view_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <attribute name="readonly">display_type == 'certification'</attribute>
+                <attribute name="force_save">1</attribute>
+            </field>
+            <field name="survey_id" position="attributes">
+                <attribute name="required">display_type == 'certification'</attribute>
+                <attribute name="options">{'no_create': True}</attribute>
+            </field>
+            <!-- Two plain dates instead of the range picker, which copies the
+                 picked day to both ends and so overwrote the computed end -->
+            <field name="date_start" position="attributes">
+                <attribute name="string">Start Date</attribute>
+                <attribute name="widget">date</attribute>
+                <attribute name="options">{}</attribute>
+            </field>
+            <field name="date_end" position="attributes">
+                <attribute name="string">End Date</attribute>
+                <attribute name="invisible">0</attribute>
+            </field>
+            <field name="survey_id" position="after">
+                <field
+                    name="proof_attachment_ids"
+                    widget="many2many_binary"
+                    invisible="display_type != 'certification'"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

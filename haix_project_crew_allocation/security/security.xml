@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="survey_survey_rule_certification_user" model="ir.rule">
+        <field name="name">Survey: internal user: read certifications</field>
+        <field name="model_id" ref="survey.model_survey_survey" />
+        <field name="domain_force">[('certification', '=', True)]</field>
+        <field name="groups" eval="[Command.link(ref('base.group_user'))]" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+</odoo>

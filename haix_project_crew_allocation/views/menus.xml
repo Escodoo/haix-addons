@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record
+        id="project_crew_allocation.action_project_task_allocation"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Planning</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Allocate people to tasks
+            </p>
+            <p>
+                Click "Allocate People" on a task to choose who works on it, or create the allocations here.
+                The timeline shows one line per person.
+            </p>
+        </field>
+    </record>
+
+    <record id="project_crew_allocation.menu_allocation_planning" model="ir.ui.menu">
+        <field name="name">Planning</field>
+    </record>
+
+    <!-- Portuguese texts of the records above, see the method docstring -->
+    <function model="ir.actions.act_window" name="_haix_translate_planning" />
+</odoo>

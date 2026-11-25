@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Escodoo
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="project_task_allocation_wizard_view_form" model="ir.ui.view">
+        <field name="name">project.task.allocation.wizard.form - haix</field>
+        <field name="model">project.task.allocation.wizard</field>
+        <field
+            name="inherit_id"
+            ref="project_crew_allocation.project_task_allocation_wizard_view_form"
+        />
+        <field name="arch" type="xml">
+            <field name="show_unavailable" position="before">
+                <field
+                    name="certification_ids"
+                    widget="many2many_tags"
+                    options="{'no_create': True}"
+                />
+            </field>
+            <xpath
+                expr="//field[@name='line_ids']/list/field[@name='employee_id']"
+                position="after"
+            >
+                <field name="job_id" readonly="1" optional="show" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

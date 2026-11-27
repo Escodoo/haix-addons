@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_warehouse" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.haix.stock</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="sale_rental.view_warehouse" />
+        <field name="arch" type="xml">
+            <field name="rental_out_location_id" position="after">
+                <field name="haix_inspection_location_id" />
+                <field name="haix_maintenance_location_id" />
+            </field>
+        </field>
+    </record>
+</odoo>

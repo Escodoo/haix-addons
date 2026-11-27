@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.haix.stock</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="action_haix_print_return_slip"
+                    type="object"
+                    string="Print Return Slip"
+                    invisible="not haix_is_rental_return"
+                />
+            </header>
+            <field name="origin" position="before">
+                <field name="haix_is_rental_return" invisible="1" />
+                <field name="haix_analytic_account_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="vpicktree" model="ir.ui.view">
+        <field name="name">stock.picking.list.haix.stock</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="haix_analytic_account_id" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_picking_internal_search" model="ir.ui.view">
+        <field name="name">stock.picking.search.haix.stock</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search" />
+        <field name="arch" type="xml">
+            <field name="origin" position="before">
+                <field name="haix_analytic_account_id" />
+            </field>
+            <filter name="available" position="before">
+                <filter
+                    string="Rental Returns"
+                    name="haix_rental_return"
+                    domain="[('haix_is_rental_return', '=', True)]"
+                />
+            </filter>
+            <filter name="origin" position="before">
+                <filter
+                    string="Lease Sheet"
+                    name="haix_group_lease_sheet"
+                    context="{'group_by': 'haix_analytic_account_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_move_tree" model="ir.ui.view">
+        <field name="name">stock.move.list.haix.stock</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_tree" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="before">
+                <field name="haix_analytic_account_id" optional="show" />
+                <field name="partner_id" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_search" model="ir.ui.view">
+        <field name="name">stock.move.search.haix.stock</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_search" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="haix_analytic_account_id" />
+            </field>
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Lease Sheet"
+                    name="haix_group_lease_sheet"
+                    context="{'group_by': 'haix_analytic_account_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Return dates for the sales team (decided on 13/11) -->
+    <record id="action_rental_returns" model="ir.actions.act_window">
+        <field name="name">Rental Returns</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">list,form</field>
+        <field
+            name="domain"
+        >[('haix_is_rental_return', '=', True), ('state', 'not in', ('done', 'cancel'))]</field>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <menuitem
+        id="menu_rental_returns"
+        name="Rental Returns"
+        parent="sale.sale_order_menu"
+        action="action_rental_returns"
+        groups="group_rental_return_date,stock.group_stock_user"
+        sequence="40"
+    />
+</odoo>

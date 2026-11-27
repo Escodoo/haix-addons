@@ -1,3 +1,5 @@
 # l10n_br demo data sets a Brazilian chart template on the company; the sale
 # post-init hook needs the module that defines it to be available.
 odoo-addon-l10n_br_coa_generic>=18.0dev,<18.1dev
+# l10n_br_fiscal warns (and the CI log check fails) without it
+xsdata

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_payments_tree" model="ir.ui.view">
+        <field name="name">account.move.line.due.list - haix_account</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account_due_list.view_payments_tree" />
+        <field name="arch" type="xml">
+            <field name="date_maturity" position="after">
+                <field name="expected_payment_date" optional="show" />
+                <field name="is_rescheduled" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_payments_filter" model="ir.ui.view">
+        <field name="name">account.move.line.due.filter - haix_account</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account_due_list.view_payments_filter" />
+        <field name="arch" type="xml">
+            <field name="date_maturity" position="after">
+                <field name="expected_payment_date" />
+                <filter
+                    name="filter_rescheduled"
+                    string="Rescheduled"
+                    domain="[('is_rescheduled', '=', True)]"
+                />
+                <filter
+                    name="group_by_expected_payment_date"
+                    string="Expected Payment Date"
+                    context="{'group_by': 'expected_payment_date:week'}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

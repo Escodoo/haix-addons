@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="group_vendor_bill_without_purchase" model="res.groups">
+        <field name="name">Post vendor bills without a purchase order</field>
+        <field name="category_id" ref="base.module_category_accounting_accounting" />
+    </record>
+</odoo>

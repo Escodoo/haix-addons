@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haix_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/models/credit_control_communication.py:0
+msgid "%(invoice)s, due on %(date)s"
+msgstr "%(invoice)s, vencimento em %(date)s"
+
+#. module: haix_account
+#: model:ir.model,name:haix_account.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de Venda"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_sale_order__billing_partner_id
+msgid "Billing Contact"
+msgstr "Contato de Faturamento e Cobrança"
+
+#. module: haix_account
+#: model_terms:ir.ui.view,arch_db:haix_account.account_move_line_reschedule_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: haix_account
+#: model:ir.model.fields,help:haix_account.field_sale_order__measurement_partner_id
+msgid ""
+"Contact at the job site who receives and approves the measurement report."
+msgstr "Contato da obra que recebe e aprova o boletim de medição."
+
+#. module: haix_account
+#: model:ir.model.fields,help:haix_account.field_sale_order__billing_partner_id
+msgid ""
+"Contact who receives the invoice and the payment reminders. It can belong to"
+" a company other than the customer of the job site."
+msgstr ""
+"Contato que recebe a fatura e as cobranças. Pode ser de outra empresa, "
+"diferente do cliente da obra."
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: haix_account
+#: model:ir.model.fields,help:haix_account.field_account_move_line__expected_payment_date
+msgid ""
+"Date the payment is expected. It starts as the due date and can be "
+"rescheduled without changing the original due date. The cash flow forecast "
+"uses this date."
+msgstr ""
+"Data em que o pagamento é esperado. Começa igual ao vencimento e pode ser "
+"reprogramada sem alterar o vencimento original. O fluxo de caixa previsto "
+"usa esta data."
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line__expected_payment_date
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__expected_payment_date
+#: model_terms:ir.ui.view,arch_db:haix_account.view_payments_filter
+msgid "Expected Payment Date"
+msgstr "Data Prevista de Pagamento"
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/wizards/account_move_line_reschedule.py:0
+msgid ""
+"Expected payment date rescheduled: %(old)s → %(new)s (original due date "
+"%(due)s)."
+msgstr ""
+"Data prevista de pagamento reprogramada: %(old)s → %(new)s (vencimento "
+"original %(due)s)."
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__id
+msgid "ID"
+msgstr "ID"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line__is_rescheduled
+msgid "Is Rescheduled"
+msgstr "Reprogramado"
+
+#. module: haix_account
+#: model:ir.model,name:haix_account.model_account_move
+msgid "Journal Entry"
+msgstr "Lançamento de Diário"
+
+#. module: haix_account
+#: model:ir.model,name:haix_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Item de Diário"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__write_uid
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__write_date
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: haix_account
+#: model:ir.model,name:haix_account.model_mis_cash_flow
+msgid "MIS Cash Flow"
+msgstr "Fluxo de Caixa do SIG"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_sale_order__measurement_partner_id
+msgid "Measurement Approver"
+msgstr "Aprovador da Medição"
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/models/credit_control_communication.py:0
+msgid "Payment reminder sent to %(contact)s (%(level)s)."
+msgstr "Cobrança enviada para %(contact)s (%(level)s)."
+
+#. module: haix_account
+#: model:res.groups,name:haix_account.group_vendor_bill_without_purchase
+msgid "Post vendor bills without a purchase order"
+msgstr "Lançar contas a pagar sem pedido de compra"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__reason
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/wizards/account_move_line_reschedule.py:0
+msgid "Reason: %(reason)s"
+msgstr "Motivo: %(reason)s"
+
+#. module: haix_account
+#: model:ir.model.fields,field_description:haix_account.field_account_move_line_reschedule__line_ids
+msgid "Receivables and Payables"
+msgstr "Títulos a Receber e a Pagar"
+
+#. module: haix_account
+#: model_terms:ir.ui.view,arch_db:haix_account.account_move_line_reschedule_form_view
+msgid "Reschedule"
+msgstr "Reprogramar"
+
+#. module: haix_account
+#: model:ir.actions.act_window,name:haix_account.account_move_line_reschedule_action
+#: model:ir.model,name:haix_account.model_account_move_line_reschedule
+msgid "Reschedule Expected Payment Date"
+msgstr "Reprogramar Data Prevista de Pagamento"
+
+#. module: haix_account
+#: model_terms:ir.ui.view,arch_db:haix_account.view_payments_filter
+msgid "Rescheduled"
+msgstr "Reprogramados"
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/wizards/account_move_line_reschedule.py:0
+msgid "Select open receivables or payables of posted entries."
+msgstr "Selecione títulos em aberto de lançamentos confirmados."
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/models/account_move_line.py:0
+msgid ""
+"The due date of %(line)s cannot be changed after the entry is posted. "
+"Reschedule the expected payment date instead."
+msgstr ""
+"O vencimento de %(line)s não pode ser alterado depois que o lançamento é "
+"confirmado. Reprograme a data prevista de pagamento."
+
+#. module: haix_account
+#: model:ir.model.fields,help:haix_account.field_account_move_line__is_rescheduled
+msgid "The expected payment date differs from the original due date."
+msgstr "A data prevista de pagamento é diferente do vencimento original."
+
+#. module: haix_account
+#. odoo-python
+#: code:addons/haix_account/models/account_move.py:0
+msgid ""
+"The vendor bill %(bill)s is not linked to a purchase order. Create the bill "
+"from the purchase order or ask a user allowed to post vendor bills without a"
+" purchase order."
+msgstr ""
+"A fatura de fornecedor %(bill)s não está vinculada a um pedido de compra. "
+"Crie a fatura a partir do pedido de compra ou peça a um usuário autorizado a"
+" lançar contas a pagar sem pedido."
+
+#. module: haix_account
+#: model_terms:ir.ui.view,arch_db:haix_account.account_move_line_reschedule_form_view
+msgid "Total"
+msgstr "Total"
+
+#. module: haix_account
+#: model:ir.model,name:haix_account.model_credit_control_communication
+msgid "credit control communication"
+msgstr ""

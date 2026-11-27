@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="seq_product_unique_number" model="ir.sequence">
+        <field name="name">Product Unique Number</field>
+        <field name="code">haix.product.unique.number</field>
+        <field name="padding">6</field>
+        <field name="number_next">1</field>
+        <field name="company_id" eval="False" />
+    </record>
+</odoo>

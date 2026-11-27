@@ -1,0 +1,365 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* haix_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-17 22:04+0000\n"
+"PO-Revision-Date: 2026-11-17 22:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: haix_stock
+#: model:ir.actions.report,print_report_name:haix_stock.action_report_return_slip
+msgid "'Romaneio de devolucao - %s' % (object.name or '').replace('/', '_')"
+msgstr "'Romaneio de devolucao - %s' % (object.name or '').replace('/', '_')"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid ""
+"<br/>\n"
+"                        <strong>Order:</strong>"
+msgstr ""
+"<br/>\n"
+"                        <strong>Pedido:</strong>"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid ""
+"<br/>\n"
+"                        <strong>Pickup address:</strong>"
+msgstr ""
+"<br/>\n"
+"                        <strong>Endereço de retirada:</strong>"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid ""
+"<br/>\n"
+"                        <strong>Scheduled pickup:</strong>"
+msgstr ""
+"<br/>\n"
+"                        <strong>Retirada programada:</strong>"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>Cliente:</strong>"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "<strong>Lease sheet:</strong>"
+msgstr "<strong>Ficha:</strong>"
+
+#. module: haix_stock
+#: model:ir.model.fields.selection,name:haix_stock.selection__product_template__haix_asset_type__assembly_supply
+msgid "Assembly Supply"
+msgstr "Insumo de Montagem"
+
+#. module: haix_stock
+#: model:ir.model.fields,help:haix_stock.field_product_product__haix_asset_type
+#: model:ir.model.fields,help:haix_stock.field_product_template__haix_asset_type
+msgid ""
+"Assembly supplies (screws, clamps) go to the job site with the equipment, "
+"but are not charged as rental nor as indemnity."
+msgstr ""
+"Os insumos de montagem (parafusos, grampos) vão para a obra junto com o "
+"equipamento, mas não são cobrados como locação nem como indenização."
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_asset_type
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_asset_type
+#: model_terms:ir.ui.view,arch_db:haix_stock.product_template_search_view
+msgid "Asset Type"
+msgstr "Tipo do Ativo"
+
+#. module: haix_stock
+#: model:res.groups,name:haix_stock.group_rental_return_date
+msgid "Change the scheduled date of rental returns"
+msgstr "Alterar a data programada das devoluções de locação"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.view_order_form
+msgid "Charge Missing Items"
+msgstr "Cobrar Itens Faltantes"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Checked"
+msgstr "Conferido"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.product_template_form_view
+msgid "Classification"
+msgstr "Classificação"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Expected"
+msgstr "Previsto"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_qty_inspection
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_qty_inspection
+msgid "In Inspection"
+msgstr "Em Inspeção"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_qty_maintenance
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_qty_maintenance
+msgid "In Maintenance"
+msgstr "Em Manutenção"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_sale_order_line__haix_indemnity_product_id
+msgid "Indemnified Product"
+msgstr "Produto Indenizado"
+
+#. module: haix_stock
+#. odoo-python
+#: code:addons/haix_stock/models/sale_order.py:0
+msgid "Indemnity - %(product)s not returned"
+msgstr "Indenização - %(product)s não devolvido"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_indemnity_value
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_indemnity_value
+msgid "Indemnity Value"
+msgstr "Valor de Indenização"
+
+#. module: haix_stock
+#. odoo-python
+#: code:addons/haix_stock/models/sale_order.py:0
+msgid "Indemnity charged for the items not returned: %(items)s"
+msgstr "Indenização cobrada pelos itens não devolvidos: %(items)s"
+
+#. module: haix_stock
+#: model:product.template,name:haix_stock.product_rental_indemnity_product_template
+msgid "Indenização de Equipamento Locado"
+msgstr "Indenização de Equipamento Locado"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_stock_warehouse__haix_inspection_location_id
+msgid "Inspection Location"
+msgstr "Local de Inspeção"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_stock_move__haix_analytic_account_id
+#: model:ir.model.fields,field_description:haix_stock.field_stock_picking__haix_analytic_account_id
+#: model_terms:ir.ui.view,arch_db:haix_stock.view_move_search
+#: model_terms:ir.ui.view,arch_db:haix_stock.view_picking_internal_search
+msgid "Lease Sheet"
+msgstr "Ficha"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_stock_warehouse__haix_maintenance_location_id
+msgid "Maintenance Location"
+msgstr "Local de Manutenção"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Notes"
+msgstr "Observações"
+
+#. module: haix_stock
+#: model:ir.model.fields,help:haix_stock.field_product_product__haix_unique_number
+#: model:ir.model.fields,help:haix_stock.field_product_template__haix_unique_number
+msgid ""
+"Number given by the system when the product is created. It never changes, "
+"even if the name or the internal reference change."
+msgstr ""
+"Número dado pelo sistema quando o produto é criado. Ele nunca muda, mesmo "
+"que o nome ou a referência interna mudem."
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.view_picking_form
+msgid "Print Return Slip"
+msgstr "Imprimir Romaneio de Devolução"
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_product_template
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Product"
+msgstr "Produto"
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_product_product
+msgid "Product Variant"
+msgstr "Variante do Produto"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.product_template_form_view
+msgid "Rental (Haix)"
+msgstr "Locação (Haix)"
+
+#. module: haix_stock
+#: model:ir.model.fields.selection,name:haix_stock.selection__product_template__haix_asset_type__rental_equipment
+msgid "Rental Equipment"
+msgstr "Equipamento de Locação"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_stock_picking__haix_is_rental_return
+msgid "Rental Return"
+msgstr "Devolução de Locação"
+
+#. module: haix_stock
+#: model:ir.actions.act_window,name:haix_stock.action_rental_returns
+#: model:ir.ui.menu,name:haix_stock.menu_rental_returns
+#: model_terms:ir.ui.view,arch_db:haix_stock.view_picking_internal_search
+msgid "Rental Returns"
+msgstr "Devoluções de Locação"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_requires_inspection
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_requires_inspection
+msgid "Requires Inspection"
+msgstr "Exige Inspeção"
+
+#. module: haix_stock
+#: model:ir.actions.report,name:haix_stock.action_report_return_slip
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Return Slip"
+msgstr "Romaneio de Devolução"
+
+#. module: haix_stock
+#: model:ir.model.fields,help:haix_stock.field_stock_warehouse__haix_inspection_location_id
+msgid "Returned rental items that require inspection are received here."
+msgstr ""
+"Os itens de locação devolvidos que exigem inspeção são recebidos aqui."
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de Venda"
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Linha do Pedido de Venda"
+
+#. module: haix_stock
+#: model:res.groups,comment:haix_stock.group_rental_return_date
+msgid "Sales users that may reschedule rental returns without stock rights."
+msgstr ""
+"Usuários do comercial que podem reprogramar devoluções de locação sem acesso"
+" ao estoque."
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Serial"
+msgstr "Série"
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_stock_move
+msgid "Stock Move"
+msgstr "Movimento de Estoque"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_supplier_value
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_supplier_value
+msgid "Supplier Value"
+msgstr "Valor do Fornecedor"
+
+#. module: haix_stock
+#: model:ir.model.constraint,message:haix_stock.constraint_product_template_haix_unique_number_uniq
+msgid "The unique number must be unique."
+msgstr "O número único não pode se repetir."
+
+#. module: haix_stock
+#. odoo-python
+#: code:addons/haix_stock/models/sale_order.py:0
+msgid ""
+"There are no missing items: everything that was delivered came back or still"
+" has a return scheduled."
+msgstr ""
+"Não há itens faltantes: tudo o que foi entregue voltou ou ainda tem "
+"devolução programada."
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transferência"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.product_template_form_view
+msgid "Unavailable"
+msgstr "Indisponível"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "Unique No."
+msgstr "Nº Único"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_unique_number
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_unique_number
+msgid "Unique Number"
+msgstr "Número Único"
+
+#. module: haix_stock
+#: model:ir.model.fields,field_description:haix_stock.field_product_product__haix_used_sale_value
+#: model:ir.model.fields,field_description:haix_stock.field_product_template__haix_used_sale_value
+msgid "Used Sale Value"
+msgstr "Valor de Venda Usado"
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_res_users
+msgid "User"
+msgstr "Usuário"
+
+#. module: haix_stock
+#: model:ir.model.fields,help:haix_stock.field_product_product__haix_indemnity_value
+#: model:ir.model.fields,help:haix_stock.field_product_template__haix_indemnity_value
+msgid ""
+"Value charged when the item is not returned. Also used as the value of the "
+"shipping invoice."
+msgstr ""
+"Valor cobrado quando o item não é devolvido. Também é o valor da nota de "
+"remessa."
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.product_template_form_view
+msgid "Values"
+msgstr "Valores"
+
+#. module: haix_stock
+#: model:ir.model,name:haix_stock.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Armazém"
+
+#. module: haix_stock
+#: model:ir.model.fields,help:haix_stock.field_product_product__haix_requires_inspection
+#: model:ir.model.fields,help:haix_stock.field_product_template__haix_requires_inspection
+msgid ""
+"When it comes back from a rental, the item goes to the Inspection location "
+"and is not available until it is released."
+msgstr ""
+"Ao voltar de uma locação, o item vai para o local Inspeção e fica "
+"indisponível até ser liberado."
+
+#. module: haix_stock
+#. odoo-python
+#: code:addons/haix_stock/models/stock_picking.py:0
+msgid "You can only change the scheduled date of the rental returns."
+msgstr "Você só pode alterar a data programada das devoluções de locação."
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "______________________________<br/>Customer"
+msgstr "______________________________<br/>Cliente"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "______________________________<br/>Driver"
+msgstr "______________________________<br/>Motorista"
+
+#. module: haix_stock
+#: model_terms:ir.ui.view,arch_db:haix_stock.report_return_slip_document
+msgid "______________________________<br/>Receiving check"
+msgstr "______________________________<br/>Conferência no recebimento"

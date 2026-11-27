@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_picking_return_date,stock.picking return date,stock.model_stock_picking,group_rental_return_date,1,1,0,0
+access_stock_move_return_date,stock.move return date,stock.model_stock_move,group_rental_return_date,1,1,0,0
+access_stock_move_line_return_date,stock.move.line return date,stock.model_stock_move_line,group_rental_return_date,1,0,0,0
+access_stock_picking_type_return_date,stock.picking.type return date,stock.model_stock_picking_type,group_rental_return_date,1,0,0,0
+access_stock_location_return_date,stock.location return date,stock.model_stock_location,group_rental_return_date,1,0,0,0
+access_stock_warehouse_return_date,stock.warehouse return date,stock.model_stock_warehouse,group_rental_return_date,1,0,0,0
+access_stock_lot_return_date,stock.lot return date,stock.model_stock_lot,group_rental_return_date,1,0,0,0

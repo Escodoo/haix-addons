@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Wesley Oliveira <wesley.oliveira@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="group_rental_return_date" model="res.groups">
+        <field name="name">Change the scheduled date of rental returns</field>
+        <field name="category_id" ref="base.module_category_sales_sales" />
+        <field
+            name="comment"
+        >Sales users that may reschedule rental returns without stock rights.</field>
+    </record>
+</odoo>
